@@ -1,3 +1,5 @@
+package leetcode.algorithms;
+
 import java.util.ArrayList;
 
 public class Tree {
@@ -47,7 +49,7 @@ public class Tree {
         
 
 
-        return root;
+        return null;
     }
 
     /**
@@ -104,9 +106,5 @@ public class Tree {
             }
         }
         System.out.println(treeToString(nodes[0]));
-    }
-
-    public static void main(String[] args) {
-        testTreeToString();
     }
 }

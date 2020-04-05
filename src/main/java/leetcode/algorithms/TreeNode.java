@@ -1,3 +1,5 @@
+package leetcode.algorithms;
+
 public class TreeNode {
     int val;
     TreeNode left;

@@ -1,3 +1,5 @@
+package leetcode.algorithms;
+
 import java.util.ArrayList;
 
 public class ListNode {
