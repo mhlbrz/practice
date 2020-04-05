@@ -19,12 +19,6 @@ public class MaxSubarrayTest {
         assertEquals(10, MaxSubarray.linear(arr3));
         assertEquals(10, MaxSubarray.linear(arr4));
         assertEquals(-2, MaxSubarray.linear(arr5));
-
-        assertEquals(6, MaxSubarray.divideConquer(arr1));
-        assertEquals(-1, MaxSubarray.divideConquer(arr2));
-        assertEquals(10, MaxSubarray.divideConquer(arr3));
-        assertEquals(10, MaxSubarray.divideConquer(arr4));
-        assertEquals(-2, MaxSubarray.divideConquer(arr5));
     }
 
 }
