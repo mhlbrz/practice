@@ -4,18 +4,18 @@ import java.util.*;
 
 /**
  * Given an array of strings, group anagrams together.
- *
+ * <p>
  * Example:
- *
+ * <p>
  * Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
  * Output:
  * [
- *   ["ate","eat","tea"],
- *   ["nat","tan"],
- *   ["bat"]
+ * ["ate","eat","tea"],
+ * ["nat","tan"],
+ * ["bat"]
  * ]
  * Note:
- *
+ * <p>
  * All inputs will be in lowercase.
  * The order of your output does not matter.
  */
@@ -25,8 +25,10 @@ public class GroupAnagrams {
         Map<String, List<String>> groups = new HashMap<>();
         for (String s : strings) {
             String sorted = countSort(s);
-            List<String> list = groups.putIfAbsent(sorted, new LinkedList<String>(){{add(s);}});
-            if (list != null){
+            List<String> list = groups.putIfAbsent(sorted, new LinkedList<String>() {{
+                add(s);
+            }});
+            if (list != null) {
                 list.add(s);
                 groups.put(sorted, list);
             }
@@ -37,14 +39,14 @@ public class GroupAnagrams {
     public static String countSort(String word) {
         int[] cnt = new int[27];
         for (byte c : word.getBytes()) {
-            cnt[c-97]++;
+            cnt[c - 97]++;
         }
         byte[] bword = new byte[word.length()];
-        int j=0;
-        for (int i=0; i<27; i++){
+        int j = 0;
+        for (int i = 0; i < 27; i++) {
             int charCnt = cnt[i];
-            while (charCnt > 0){
-                bword[j] = (byte)(97 + i);
+            while (charCnt > 0) {
+                bword[j] = (byte) (97 + i);
                 j++;
                 charCnt--;
             }
