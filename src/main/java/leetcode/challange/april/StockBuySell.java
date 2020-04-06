@@ -32,8 +32,8 @@ public class StockBuySell {
     public static int maxProfit(int[] prices) {
         int profit = 0;
         for (int i = 0; i < prices.length - 1; i++) {
-            if (prices[i] < prices[i+1]) {
-                profit += prices[i+1] - prices[i];
+            if (prices[i] < prices[i + 1]) {
+                profit += prices[i + 1] - prices[i];
             }
         }
         return profit;
@@ -41,7 +41,7 @@ public class StockBuySell {
 
     // find indices of buy and sell for max price for single deal
     public static Deal bestDeal(int[] prices) {
-        Deal deal = new Deal(0,0);
+        Deal deal = new Deal(0, 0);
         int maxProfit = 0;
         int low = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -59,7 +59,7 @@ public class StockBuySell {
         return deal;
     }
 
-    public static class Deal{
+    public static class Deal {
         int buyInd;
         int sellInd;
 
